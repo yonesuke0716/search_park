@@ -15,7 +15,7 @@ https://yonesuke0716.hatenablog.com/entry/2022/09/22/004250
 詳細は以下の記事を参照ください。
 https://yonesuke0716.hatenablog.com/entry/2022/10/12/173105
 
-※2022/10/12更新
+※2022/10/26更新
 グラフを動的に変化させられるようにしました。
 詳細は以下の記事を参照ください。
 https://yonesuke0716.hatenablog.com/entry/2022/10/26/221728
