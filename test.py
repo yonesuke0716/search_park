@@ -24,11 +24,20 @@ else:
         link = f"[{url}]({url})"
         st.markdown(link, unsafe_allow_html=True)
 
-fig, ax = plt.subplots()
-ax.bar(df["公園"], df["年齢"])
-ax.set_ylim([0, 3])
-ax.set_yticks([0, 1, 2, 3])
-ax.set_title("公園と年齢")
-ax.set_xlabel("公園")
-ax.set_ylabel("年齢")
-st.pyplot(fig)
+is_graph = st.checkbox('年齢をグラフ化する')
+if is_graph:
+    max_age = st.slider('年齢の上限', 0, 5, 3)
+    age_ticks = range(max_age + 1)
+    
+    park_list = df["公園"].to_list()
+    select_park = st.multiselect('表示する公園名を選択', park_list, park_list[0])
+    df = df[df['公園'].isin(select_park)]
+    
+    fig, ax = plt.subplots()
+    ax.bar(df["公園"], df["年齢"])
+    ax.set_ylim([0, max_age])
+    ax.set_yticks(age_ticks)
+    ax.set_title("公園と年齢")
+    ax.set_xlabel("公園")
+    ax.set_ylabel("年齢")
+    st.pyplot(fig)
