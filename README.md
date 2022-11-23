@@ -19,3 +19,8 @@ https://yonesuke0716.hatenablog.com/entry/2022/10/12/173105
 グラフを動的に変化させられるようにしました。
 詳細は以下の記事を参照ください。
 https://yonesuke0716.hatenablog.com/entry/2022/10/26/221728
+
+※2022/11/23更新
+オブジェクト指向でグラフを書けるようにしました。
+詳細は以下の記事を参照ください。
+https://yonesuke0716.hatenablog.com/entry/2022/11/23/104131
