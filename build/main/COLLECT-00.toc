@@ -154,6 +154,4 @@
    'BINARY'),
   ('base_library.zip',
    'C:\\work\\未納品\\search_park\\build\\main\\base_library.zip',
-   'DATA'),
-  ('test.py', 'C:\\work\\未納品\\search_park\\test.py', 'DATA'),
-  ('test.xlsx', 'C:\\work\\未納品\\search_park\\test.xlsx', 'DATA')],)
+   'DATA')],)

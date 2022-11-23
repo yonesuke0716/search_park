@@ -5,6 +5,8 @@ import numpy as np
 import pandas as pd
 import seaborn as sns
 
+from graph import Graph
+
 sns.set(font="IPAexGothic")
 
 st.markdown(" ## 公園検索")
@@ -33,11 +35,15 @@ if is_graph:
     select_park = st.multiselect('表示する公園名を選択', park_list, park_list[0])
     df = df[df['公園'].isin(select_park)]
     
-    fig, ax = plt.subplots()
-    ax.bar(df["公園"], df["年齢"])
-    ax.set_ylim([0, max_age])
-    ax.set_yticks(age_ticks)
-    ax.set_title("公園と年齢")
-    ax.set_xlabel("公園")
-    ax.set_ylabel("年齢")
-    st.pyplot(fig)
+    # fig, ax = plt.subplots()
+    # ax.bar(df["公園"], df["年齢"])
+    # ax.set_ylim([0, max_age])
+    # ax.set_yticks(age_ticks)
+    # ax.set_title("公園と年齢")
+    # ax.set_xlabel("公園")
+    # ax.set_ylabel("年齢")
+    # st.pyplot(fig)
+
+    graph_obj = Graph(y_min=0, y_max=max_age, g_title="公園と年齢", x_label="公園", y_label="年齢", y_ticks=age_ticks)
+    graph_obj.plot_bar(df["公園"], df["年齢"], st)
+
